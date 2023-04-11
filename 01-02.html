@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="jp270405060104010210141534327satxebsyhs7">
+<title>JavaScript入門1</title>
+<style>
+  table{border:solid 1px orange; border-spacing:0px;}
+  th,td{border:solid 1px orange; padding:4px;}
+</style>
+<script type="text/javascript">
+  var prodName = ["Apple Watch", "MacBook"];
+  var prodPrice = [66800, 148000];
+</script>
+</head>
+<body>
+<h1>新製品価格表</h1>
+<table>
+  <tr><th>製品名</th><th>価格</th><th>特別価格</th></tr>
+  <script type="text/javascript">
+    document.write("<tr>");
+    document.write("<td>" + prodName[0] + "</td>");
+    document.write("<td>" + prodPrice[0] + "</td>");
+    document.write("<td>" + prodPrice[0] * 0.7 + "</td>");
+    document.write("</tr><tr>");
+    document.write("<td>" + prodName[1] + "</td>");
+    document.write("<td>" + prodPrice[1] + "</td>");
+    document.write("<td>" + prodPrice[1] * 0.7 + "</td>");
+    document.write("</tr>");
+  </script>
+</table>
+</body>
+</html>
+
