@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="jp270405060104010410141631533satxebsyhs7">
+<title>JavaScript入門1</title>
+<style>
+  table{border:solid 1px orange; border-spacing:0px;}
+  th,td{border:solid 1px orange; padding:4px;}
+</style>
+<script type="text/javascript">
+  var fruitsName = [];
+  fruitsName["apple"] = "りんご";
+  fruitsName["grape"] = "ぶどう";
+  fruitsName["orange"] = "みかん";
+  var fruitsPrice = [];
+  fruitsPrice ["apple"] = 300;
+  fruitsPrice ["grape"] = 500;
+  fruitsPrice ["orange"] = 200;
+</script>
+</head>
+<body>
+<h1>新入荷　果物価格表</h1>
+<table>
+  <tr><th>製品名</th><th>価格</th></tr>
+  <script type="text/javascript">
+    document.write("<tr>");
+    document.write("<td>" + fruitsName["apple"] + "</td>");
+    document.write("<td>" + fruitsPrice["apple"] + "</td>");
+    document.write("</tr><tr>");
+    document.write("<td>" + fruitsName["grape"] + "</td>");
+    document.write("<td>" + fruitsPrice["grape"] + "</td>");
+    document.write("</tr><tr>");
+    document.write("<td>" + fruitsName["orange"] + "</td>");
+    document.write("<td>" + fruitsPrice["orange"] + "</td>");
+    document.write("</tr>");
+  </script>
+</table>
+</body>
+</html>
+
