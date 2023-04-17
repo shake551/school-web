@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="jp270405060204010117141435423satxebsyhs7">
+<title>JavaScript入門2</title>
+</head>
+<body>
+<h1>乱数と切捨ての練習</h1>
+<script type="text/javascript">
+  var x = Math.random();
+  var min_x = 0; // 整数
+  var max_x = 1; // 整数
+  console.log( "x=Math.random()="+x+"は，"+min_x+"以上"+max_x+"未満の実数乱数です" );
+  var y = x * 6; //xを使った式
+  var min_y = 0; // 整数
+  var max_y = 6; // 整数
+  console.log( "y=6*x="+y+"は，"+min_y+"以上"+max_y+"未満の実数乱数です" );
+  var z = Math.floor( y );
+  var min_z = 0; // 整数
+  var max_z = 6; // 整数
+  console.log( "z=Math.floor(y)="+z+"は，"+min_z+"以上"+max_z+"未満の整数乱数です" );
+  var sainome = z + 1; //zを使った式
+  if( sainome % 2 == 0 ){
+    document.write( "サイコロの目"+sainome+"は偶数です" );
+  } else {
+    document.write( "サイコロの目"+sainome+"は奇数です" );
+  }
+</script>
+</body>
+</html>
+

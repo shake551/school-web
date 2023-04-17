@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="jp270405060204010217141530003satxebsyhs7">
+<title>JavaScript入門2</title>
+</head>
+<body>
+<h1>トランプをシャフル</h1>
+<font size="12">
+<script type="text/javascript">
+  var n = [];
+  n[0] = "<font color='red'>A</font>";
+  var i;
+  for( i = 1; i<10; i++ ){
+    n[i] = i+1;
+  }
+  n[10] = "<font color='lightgreen'>J</font>";
+  n[11] = "<font color='blue'>Q</font>";
+  n[12] = "<font color='orange'>K</font>";
+  for( i = 0; i < 100; i ++ ){
+    //xとyに0以上12以下の整数乱数を代入　　　　　　　
+    var x = Math.floor( Math.random() * 13);
+    var y = Math.floor( Math.random() * 13);
+    //配列nの第x番要素と第y番要素を入れ替える．　　　　　　　
+    var tmp = n[x];
+    n[x] = n[y];
+    n[y] = tmp;
+  }
+  for( i = 0; i < 13; i++ ){
+    document.write( n[i]+"," );
+  }
+</script>
+</body>
+</html>
+
