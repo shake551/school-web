@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="jp270405060304010424141130512satxebsyhs7">
+<title>JavaScript入門3</title>
+<script type="text/javascript">
+  // 2次方程式ax^2+bx+c=0の判別式を返す関数　　　　　　　
+  function calD( a, b, c ){
+    // Javascriptのべき乗はb**2ですがここでは使わない(b^2はjavascriptの算術演算子ではない)　　　　　　　
+    return b*b-4*a*c;
+  }
+
+  // 2次方程式ax^2+bx+c=0の解を表示する関数　　　　　　　
+  function calSolution( a, b, c ){
+    var D = calD(a, b, c);
+    if( D > 0 ){
+      var x1 = (-b+Math.sqrt(D))/(2*a);
+      var x2 = (-b-Math.sqrt(D))/(2*a);
+      document.write( "2つの実数解 " + x1 + ", " + x2 );
+    } else if( D < 0 ){
+      var re = -b/(2 * a);
+      var im = Math.sqrt(-D)/(2 * a);
+      document.write( "2つの虚数解 "+ re + "±(" + im + ")i" );
+    } else {
+      var x = -b / (2*a);
+      document.write( "1つの実数解 "+ x );
+    }
+  }
+</script></head>
+<body>
+<h1>2次方程式の解</h1>
+<p>
+x<sup>2</sup>-5x+6=0の解は
+<script type="text/javascript">
+  calSolution( 1, -5, 6 );
+</script>
+</p>
+<p>
+x<sup>2</sup>-2x+1=0の解は
+<script type="text/javascript">
+  calSolution(1, -2, 1);
+</script>
+</p>
+<p>
+x<sup>2</sup>+x+1=0の解は
+<script type="text/javascript">
+  calSolution(1, 1, 1);
+</script>
+</p>
+</body>
+</html>
+

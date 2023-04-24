@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="jp270405060304010524141131556satxebsyhs7">
+<title>JavaScript入門3</title>
+<style>
+  table{border:solid 1px orange; border-spacing:0px;}
+  th,td{border:solid 1px orange; padding:4px;}
+</style>
+<script type="text/javascript">
+  // youbiで指定した曜日から始まる31日月のカレンダーを表示　　　　　　　
+  // youbi=0は日曜，youbi=1は月曜，・・・，youbi=6は土曜　　　　　　　
+  function writeCalendar( youbi ){
+    var you = ["日","月","火","水","木","金","土"];
+    document.write( "<p><h2>1日が"+you[youbi]+"曜のカレンダー</h2>" );
+    document.write( "<table border='1'><tr>" );
+    var i, j;
+    //日，月，．．．．土を表示　　　　　　　
+    for( i = 0; i<7; i++ ){
+      document.write( "<th>"+you[i]+"</th>" );
+    }
+    document.write( "</tr>" );
+
+    //考え方　　　　　　　
+    //1日が月曜の月なら左上に空白マスが１つ，　　　　　　　
+    //1日が火曜の月なら２つ，　　　　　　　
+    //1日が水曜の月なら３つ，…　　　　　　　
+    //1日が土曜の月なら６つ並ぶから，　　　　　　　
+    //全体のマスの数はyoubi+31個以上必要になる　　　　　　　
+    //だからカレンダーの行数はこれを7で割ったときの小数点以下切り上げた数に等しい　　　　　　　
+    //　　　　　　　
+    //また　　　　　　　
+    //1日が月曜の月なら最初の日曜マスに0，　　　　　　　
+    //1日が火曜の月なら-1，　　　　　　　
+    //1日が水曜の月なら-2，...　　　　　　　
+    //1日が土曜の月なら-6，　　　　　　　
+    //を入れて，　　　　　　　
+    //そこから順に+1しながらマスを埋めて行き，7マス毎に改行し，31まで埋めれば　　　　　　　
+    //カレンダーは完成（ただし１以下の数字は表示しない）　　　　　　　
+
+    //カレンダーの行数gyou（Math.ceilは切り上げ関数）　　　　　　　
+    var gyou = Math.ceil((youbi+31) / 7);
+    //最初の日曜マスに入る数字day　　　　　　　
+    var day = 1-youbi;
+    for( i = 0; i < gyou; i ++ ){
+      document.write( "<tr>" );
+      for( j = 0; j<7; j++ ){
+        document.write( "<td align='right'>" );
+        if( day >= 1 && day <= 31 ){
+          document.write( day );
+        }
+        document.write( "</td>" );
+        day ++;
+      }
+      document.write( "</tr>" );
+    }
+    document.write( "</table></p>" );
+  }
+</script></head>
+<body>
+<h1>カレンダー</h1>
+<script type="text/javascript">
+  //1日が月曜のカレンダー　　　　　　　
+  writeCalendar( 1 );
+  //1日が金曜のカレンダー　　　　　　　
+  writeCalendar(5);
+</script>
+</body>
+</html>
+

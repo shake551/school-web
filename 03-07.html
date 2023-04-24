@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="jp270405060304010724141133546satxebsyhs7">
+<title>JavaScript入門3</title>
+<script type="text/javascript">
+function seki_rand10(){
+//★目標5行　　　　　　　
+  var seki = 1, i;
+  for (i=1; i<10; i++) {
+    seki *= Math.random();
+  }
+  return seki
+//★　　　　　　　
+}
+</script>
+</head>
+<body>
+<h1>seki=乱数10個の積</h1>
+<script type="text/javascript">
+//★目標2行　　　　　　　
+  var seki = seki_rand10();
+  document.write( "seki=" + seki );
+//★　　　　　　　
+</script>
+</body>
+</html>
+<!--05-13-->
+

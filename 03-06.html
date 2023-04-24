@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="jp270405060304010624141132953satxebsyhs7">
+<title>JavaScript入門3</title>
+<script type="text/javascript">
+//★目標6行　　　　　　　
+function sum_random10() {
+	var sum = 0, i;
+	for (i=0; i<10; i++) {
+		sum += Math.floor( Math.random());
+	}
+	return sum;
+//★　　　　　　　
+}
+</script>
+</head>
+<body>
+<h1>sum=乱数10個の和</h1>
+<script type="text/javascript">
+  var sum = sum_random10();
+  document.write( "sum=" + sum );
+</script>
+<br/>
+<br/>
+※数度reloadして異常値(負とか10異常とか)がでないか動作確認
+</body>
+</html>
+<!--05-12-->
+
