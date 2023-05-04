@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="jp270405060405010801141631200satxebsyhs7">
+<title>JavaScript入門4</title>
+<script type="text/javascript">
+//★目標9行　　    　　  //
+function max_rand10() {
+  var max=0, i;
+  for (i=0; i<10; i++) {
+    var rand = Math.random();
+    if (max < rand) {
+      max = rand;
+    }
+  }
+  var elm = document.getElementById("max_p");
+
+
+//★　　    　　  //
+  elm.innerText = "最大値:"+max;
+}
+</script>
+</head>
+<body>
+<h1>10個の乱数の最大値</h1>
+<p id="max_p">?</p>
+<p onClick="max_rand10()">ここをクリック</p>
+</body>
+</html>
+<!--05-14-->
+

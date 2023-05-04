@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="jp270405060405010701141535500satxebsyhs7">
+<title>JavaScript入門4</title>
+<style type="text/css">
+  body{
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "sans-serif";
+  }
+  div{
+    width: 150px;
+    float: left;
+    margin: 2px;
+    padding: 10px;
+    font-size: 12px;
+    background-color: #000;
+    color: #FFF;
+  }
+</style>
+<script type="text/javascript">
+  function dispItem(mode, id){
+    var elm = document.getElementById(id);
+    if (mode == "over" || mode == "up"){
+      // 背景色の変更　　    　　  //
+      elm.style.backgroundColor = "#CCC";
+      // 文字色の変更　　    　　  //
+      elm.style.color = "#000";
+      // 文字の太さの変更　　    　　  //
+      elm.style.fontWeight = "normal";
+    } else if (mode == "down"){
+      // 背景色の変更　　    　　  //
+      elm.style.backgroundColor = "#EEE";
+      elm.style.fontWeight = "bolder";
+    } else{
+      // 背景色の変更　　    　　  //
+      elm.style.backgroundColor = "#000";
+      // 文字色の変更　　    　　  //
+      elm.style.color = "#FFF";
+    }
+  }
+</script>
+</head>
+<body>
+<h1>Web大学</h1>
+<!-- イベントハンドラはポインタが「乗った時」「外れた時」ボタンが「押された時」「離された時」の順で書くこと-->
+<div id="p1" onMouseOver="dispItem('over', 'p1')" onMouseOut="dispItem('out', 'p1')" onMouseDown="dispItem('down', 'p1')" onMouseUp="dispItem('up', 'p1')">大学案内</div>
+<div id="p2" onMouseOver="dispItem('over', 'p2')" onMouseOut="dispItem('out', 'p2')" onMouseDown="dispItem('down', 'p2')" onMouseUp="dispItem('up', 'p2')">学域・学部・大学院</div>
+<div id="p3" onMouseOver="dispItem('over', 'p3')" onMouseOut="dispItem('out', 'p3')" onMouseDown="dispItem('down', 'p3')" onMouseUp="dispItem('up', 'p3')">教育研究</div>
+</body>
+</html>
+

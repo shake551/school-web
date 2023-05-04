@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="jp270405060405010901141631854satxebsyhs7">
+<title>JavaScript入門4</title>
+<script type="text/javascript">
+//★目標7行　　    　　  //
+function list_rand10() {
+  var str = "", i;
+  for (i = 0; i<10; i++) {
+    str += Math.random() + "<br/>";
+  }
+  var elm = document.getElementById("list_p");
+  elm.innerHTML
+
+
+//★　　    　　  //
+  = str + "END<br/>"; //注:直前行の変数にこの行の値を代入　　    　　  //
+}
+</script>
+</head>
+<body>
+<h1>10個の乱数の表示</h1>
+<p onMouseover="list_rand10()">ここをマウスポインタが通過すると...</p>
+<p id="list_p"></p>
+</body>
+</html>
+<!--05-15-->
+
