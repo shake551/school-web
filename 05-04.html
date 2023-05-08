@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="jp270405060505010408141530729satxebsyhs7">
+<title>JavaScript入門5</title>
+<script type="text/javascript">
+  function norikae(){
+    var elmHour = document.getElementsByName( "hour" );
+    var elmMin = document.getElementById("min");
+    var i;
+    for( i = 0; i < elmHour.length; i ++ ){
+      if( elmHour[i].checked == true ){
+        var hour = Number(elmHour[i].value);
+        break;
+      }
+    }
+    var train = [0, 6, 12, 18, 24, 30, 36, 42, 49, 56, 4+60, 14+60, 21+60, 29+60, 36+60, 44+60, 51+60, 56+60];
+    var min = Number(elmMin.value);
+    //入力された時刻(hour:min)を8:00からの分に変換　　    　　  //
+    min = (hour-8)*60 + min;
+    //時刻表の範囲内かチェック（8時65分などの入力は許す）　　    　　  //
+    if( elmMin.value == "" || isNaN(elmMin.value) || min < 0 || min > train[train.length-1] ){
+      alert( "ご案内できる電車がありません（min error）" );
+      return;
+    }
+    for( i = 0; i < train.length; i ++ ){
+      if( min <= train[i] ){
+        //次行の解答は3文字　　    　　  //
+        hour = Math.floor(train[i]/60) + 8;
+        //次行の解答は3文字　　    　　  //
+        min = train[i] %60;
+        var elmAns = document.getElementById("ans");
+        elmAns.innerText = "発車時刻は" + hour + "時" + min + "分です";
+        break;
+      }
+    }
+  }
+</script>
+</head>
+<body>
+<h1>乗換案内</h1>
+出発時刻
+<input type="radio" name="hour" value="8" checked>8時
+<input type="radio" name="hour" value="9">9時
+<input id="min" type="text" size="3"/>分<br/>
+<input onClick="norikae()" type="button" value="案内"/>
+<p id="ans"></p>
+</body>
+</html>
+

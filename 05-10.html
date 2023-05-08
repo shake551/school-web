@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="jp270405060505011008141634402satxebsyhs7">
+<title>JavaScript入門5</title>
+<script type="text/javascript">
+function funcAns(){
+//★目標4行　　    　　  //
+  var str="", i;
+  for (i = 0; i<10; i++) {
+    str += i + ":" + Math.random() + "<br/>";
+  }
+
+
+
+
+
+//★　　    　　  //
+  var elmAns = document.getElementById( "ans" );
+  elmAns.innerHTML = str + "END<br/>";
+}
+</script>
+</head>
+<body>
+<input onClick="funcAns()" type="button" value="start"/>
+<p id="ans"></p>
+</body>
+</html>
+<!--05-16-->
+

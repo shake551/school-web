@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="jp270405060505010308141530021satxebsyhs7">
+<title>JavaScript入門5</title>
+<script type="text/javascript">
+  function mile2kiro() {
+    var elmMile = document.getElementById( "mile" );
+    var mile = Number(elmMile.value);
+    //未入力，非数値，負値の順でチェックする（負値チェック以外mileを使わない）　　    　　  //
+    if( elmMile.value == "" || isNaN(elmMile.value) || mile < 0 ){
+      alert( "正しい値を入力して下さい" );
+      return;
+    }
+    var kiro = Math.floor(mile*1.609*100 + 0.5) / 100;
+    var elmkekka = document.getElementById("kekka");
+    elmkekka.innerText = mile + "マイルは" + kiro + "キロメートル";
+  }
+</script>
+</head>
+<body>
+<h1>マイル→キロメートル</h1>
+<input id="mile" type="text"/>マイル<br/>
+<input onClick="mile2kiro()" type="button" value="換算"/>
+<p id="kekka"></p>
+</body>
+</html>
+
