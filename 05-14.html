@@ -7,7 +7,7 @@
 <script type="text/javascript">
 function numLength( x ){
 //★目標6行　　    　　  //
-
+  return Math.ceil(Math.log10(Number(x) + 1));
 
 
 
@@ -29,10 +29,10 @@ function reverse(x){
   var num = numLength(x);
   var i, str="逆順：";
 //★目標6行　　    　　  //
-
-
-
-
+  for (i=1; i<=num; i++) {
+    str += Math.floor(x * 10 / (10 ** i)) % 10;
+  }
+  return str;
 
 
 
