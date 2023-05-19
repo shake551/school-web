@@ -6,32 +6,32 @@
 <title>JavaScript入門5</title>
 <script type="text/javascript">
   function calMinMaxAveVar(){
-    var elmData = ■ここを埋める■
-    var data = ■ここを埋める■
-    var sum=■ここを埋める■, min, max, i;
-    for( i = 0; i < ■ここを埋める■; i ++ ){
+    var elmData = document.getElementById("data");
+    var data = elmData.value.split(",");
+    var sum=0, min, max, i;
+    for( i = 0; i < data.length; i ++ ){
       // 空文字列，非数値の順でチェックする　　    　　  //
-      if( ■ここを埋める■ ){
-        ■ここを埋める■( "数値をカンマで区切って入力して下さい" );
-        ■ここを埋める■;
+      if( data[i] == "" || isNaN(data[i]) ){
+        alert( "数値をカンマで区切って入力して下さい" );
+        return;
       }
-      data[i] = ■ここを埋める■( data[i] );
-      if( i ■ここを埋める■ data[i] ){
+      data[i] = Number( data[i] );
+      if( i == 0 || max < data[i] ){
         max = data[i];
       }
-      if( i ■ここを埋める■ data[i] ){
+      if( i == 0 || min > data[i] ){
         min = data[i];
       }
-      sum ■ここを埋める■;
+      sum += data[i];
     }
-    var ave = sum / data■ここを埋める■;
-    sum = ■ここを埋める■;
-    for( i = 0; i < ■ここを埋める■; i ++ ){
-      sum += ■ここを埋める■;
+    var ave = sum / data.length;
+    sum = 0;
+    for( i = 0; i < data.length; i ++ ){
+      sum += (data[i] - ave) * (data[i] - ave);
     }
-    var vari = sum / data■ここを埋める■;
-    var elmAns = ■ここを埋める■
-    ■ここを埋める■ = "最大値は" + max + ", 最小値は" + min + ", 平均は" + ave + ", 分散は" + vari;
+    var vari = sum / data.length;
+    var elmAns = document.getElementById("ans");
+    elmAns.innerText = "最大値は" + max + ", 最小値は" + min + ", 平均は" + ave + ", 分散は" + vari;
   }
 </script>
 </head>
@@ -39,7 +39,7 @@
 <h1>最大値・最小値・分散</h1>
 <p>半角カンマ区切で入力して下さい<br/>
 data: <input id="data" type="text"/><br/>
-<input ■ここを埋める■ type="button" value="計算"/>
+<input onClick="calMinMaxAveVar()" type="button" value="計算"/>
 <p id="ans"></p>
 </body>
 </html>

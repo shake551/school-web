@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="jp270405060505010619141034445satxebsyhs7">
+<title>JavaScript入門5</title>
+<style>
+  td {text-align: center}
+</style>
+<script type="text/javascript">
+  function shopping() {
+    var prodName = ["商品A","商品B","商品C"];
+    var prodPrice = [5000, 6000, 7000];
+    var elmProd = document.getElementsByName( "prod" );
+    var i;
+    for( i = 0; i < elmProd.length; i ++ ){
+      if( elmProd[i].checked == true ){
+        break;
+      }
+    }
+    var elmKazu = document.getElementById("kazu");
+    var kazu = Number(elmKazu.value);
+    //未入力，非数値，負値の順でチェックする（負値チェック以外kazuを使わない）　　    　　  //
+    if( elmKazu.value == "" || isNaN(elmKazu.value) || kazu < 0 ){
+      alert( "正しい数量を入れて下さい" );
+      return;
+    }
+    var goukei = prodPrice[i] * kazu;
+    var elmAns = document.getElementById("ans");
+    //次行は最後にHTMLタグを含むのでinnerHTMLを使う　　    　　  //
+    elmAns.innerHTML += "ご購入：" + prodName[i] + ", 数量：" + kazu + ", 合計金額：" + goukei + "円<br/>";
+  }
+</script>
+</head>
+<body>
+<!--
+！！！準備！！！
+このファイルのあるフォルダに「share」というフォルダを作り，
+その中に配布されたfiles05.zipの中のファイルを入れてから実行してください．
+-->
+<h1>購入フォーム</h1>
+<p>商品と数量を選んで下さい<br/>
+<table>
+<tr>
+<td>商品A</td>
+<td>商品B</td>
+<td>商品C</td>
+</tr><tr>
+<td><img src="share/item1.jpg" width="100"></td>
+<td><img src="share/item2.jpg" width="100"></td>
+<td><img src="share/item3.jpg" width="100"></td>
+</tr><tr>
+<td><input type="radio" name="prod" value="0" checked/>5000円</td>
+<td><input type="radio" name="prod" value="1"/>6000円</td>
+<td><input type="radio" name="prod" value="2"/>7000円</td>
+</tr>
+</table>
+数量<input id="kazu" type="text" size="3"/>ケース
+<input onClick="shopping()" type="button" value="カートに入れる"/>
+<p id="ans">カート：<br/></p>
+</body>
+</html>
+

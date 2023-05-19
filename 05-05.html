@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="jp270405060505010519141033554satxebsyhs7">
+<title>JavaScript入門5</title>
+<script type="text/javascript">
+  function calMinMax(){
+    var elmData = document.getElementById( "data" );
+    // 未入力チェック　　    　　  //
+    if( elmData.value == "" ){
+      alert( "数値をカンマで区切って入力して下さい" );
+      return;
+    }
+    var data = elmData.value.split(",");
+    var min, max, i;
+    for( i = 0; i < data.length; i ++ ){
+      // 空文字列，非数の順でチェックする　　    　　  //
+      if( data[i] == "" || isNaN(data[i]) ){
+        alert( "数値を入力して下さい" );
+        return;
+      }
+      data[i] = Number( data[i] );
+      if( i == 0 || max < data[i] ){
+        max = data[i];
+      }
+      if( i == 0 || min > data[i] ){
+        min = data[i];
+      }
+    }
+    var elmAns = document.getElementById("ans");
+    elmAns.innerText = "最大値は" + max + ", 最小値は" + min;
+  }
+</script>
+</head>
+<body>
+<h1>最大値・最小値</h1>
+<p>数値をカンマ区切で入力して下さい<br/>
+data: <input id="data" type="text"/><br/>
+<input onClick="calMinMax()" type="button" value="計算"/>
+<p id="ans"></p>
+</body>
+</html>
+

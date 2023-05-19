@@ -6,31 +6,31 @@
 <title>JavaScript入門5</title>
 <script type="text/javascript">
   function mile2kiro(x){
-    var elmMile = ■ここを埋める■
-    var elmKiro = ■ここを埋める■
-    if( ■ここを埋める■ ){
-      var mile = Number(■ここを埋める■);
+    var elmMile = document.getElementById("mile");
+    var elmKiro = document.getElementById("kiro");
+    if( x == 1 ){
+      var mile = Number(elmMile.value);
       //未入力，非数値，負値の順でチェックする　　    　　  //
-      if( ■ここを埋める■ 0 ){
-        ■ここを埋める■( "非負の数値を入力して下さい" );
-        ■ここを埋める■;
+      if( elmMile.value == "" || isNaN(elmMile.value) || mile < 0 ){
+        alert( "非負の数値を入力して下さい" );
+        return;
       }
-      elmKiro.value = Math.floor(mile*1.609■ここを埋める■
-    }■ここを埋める■{
-      var kiro = Number(■ここを埋める■);
+      elmKiro.value = Math.floor(mile*1.609*100 + 0.5) / 100;
+    } else {
+      var kiro = Number(elmKiro.value);
       //未入力，非数値，負値の順でチェックする　　    　　  //
-      if( ■ここを埋める■ 0 ){
-        ■ここを埋める■( "非負の数値を入力して下さい" );
-        ■ここを埋める■;
+      if( elmKiro.value == "" || isNaN(elmKiro.value) || kiro < 0 ){
+        alert( "非負の数値を入力して下さい" );
+        return;
       }
-      elmMile.value = Math.floor(kiro/1.609■ここを埋める■
+      elmMile.value = Math.floor(kiro/1.609*100 + 0.5) / 100;
     }
   }
   function boxClear(){
-    var elmMile = ■ここを埋める■
-    var elmKiro = ■ここを埋める■
-    elmMile.■ここを埋める■
-    elmKiro.■ここを埋める■
+    var elmMile = document.getElementById("mile");
+    var elmKiro = document.getElementById("kiro");
+    elmMile.value = "";
+    elmKiro.value = "";
   }
 </script>
 </head>
