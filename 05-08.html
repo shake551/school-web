@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="jp270405060505010819141035946satxebsyhs7">
+<title>JavaScript入門5</title>
+<script type="text/javascript">
+  function mile2kiro(x){
+    var elmMile = ■ここを埋める■
+    var elmKiro = ■ここを埋める■
+    if( ■ここを埋める■ ){
+      var mile = Number(■ここを埋める■);
+      //未入力，非数値，負値の順でチェックする　　    　　  //
+      if( ■ここを埋める■ 0 ){
+        ■ここを埋める■( "非負の数値を入力して下さい" );
+        ■ここを埋める■;
+      }
+      elmKiro.value = Math.floor(mile*1.609■ここを埋める■
+    }■ここを埋める■{
+      var kiro = Number(■ここを埋める■);
+      //未入力，非数値，負値の順でチェックする　　    　　  //
+      if( ■ここを埋める■ 0 ){
+        ■ここを埋める■( "非負の数値を入力して下さい" );
+        ■ここを埋める■;
+      }
+      elmMile.value = Math.floor(kiro/1.609■ここを埋める■
+    }
+  }
+  function boxClear(){
+    var elmMile = ■ここを埋める■
+    var elmKiro = ■ここを埋める■
+    elmMile.■ここを埋める■
+    elmKiro.■ここを埋める■
+  }
+</script>
+</head>
+<body>
+<h1>マイル⇔キロメートル</h1>
+<input id="mile" type="text"/>マイル<br/>
+<input onClick="mile2kiro(1)" type="button" value="↓"/>
+<input onClick="mile2kiro(0)" type="button" value="↑"/><br/>
+<input id="kiro" type="text"/>キロメートル<br/>
+<input onClick="boxClear()" type="button" value="クリア"/>
+</body>
+</html>
+
