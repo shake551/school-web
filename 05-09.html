@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="jp270405060505010919141130852satxebsyhs7">
+<title>JavaScript入門5</title>
+<script type="text/javascript">
+  function calMinMaxAveVar(){
+    var elmData = ■ここを埋める■
+    var data = ■ここを埋める■
+    var sum=■ここを埋める■, min, max, i;
+    for( i = 0; i < ■ここを埋める■; i ++ ){
+      // 空文字列，非数値の順でチェックする　　    　　  //
+      if( ■ここを埋める■ ){
+        ■ここを埋める■( "数値をカンマで区切って入力して下さい" );
+        ■ここを埋める■;
+      }
+      data[i] = ■ここを埋める■( data[i] );
+      if( i ■ここを埋める■ data[i] ){
+        max = data[i];
+      }
+      if( i ■ここを埋める■ data[i] ){
+        min = data[i];
+      }
+      sum ■ここを埋める■;
+    }
+    var ave = sum / data■ここを埋める■;
+    sum = ■ここを埋める■;
+    for( i = 0; i < ■ここを埋める■; i ++ ){
+      sum += ■ここを埋める■;
+    }
+    var vari = sum / data■ここを埋める■;
+    var elmAns = ■ここを埋める■
+    ■ここを埋める■ = "最大値は" + max + ", 最小値は" + min + ", 平均は" + ave + ", 分散は" + vari;
+  }
+</script>
+</head>
+<body>
+<h1>最大値・最小値・分散</h1>
+<p>半角カンマ区切で入力して下さい<br/>
+data: <input id="data" type="text"/><br/>
+<input ■ここを埋める■ type="button" value="計算"/>
+<p id="ans"></p>
+</body>
+</html>
+
