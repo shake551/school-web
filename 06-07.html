@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="jp270405060605010729141733737satxebsyhs7">
+<title>JavaScript入門6</title>
+<script type="text/javascript">
+function rand05(){
+  return Math.floor(Math.random()*6);
+}
+function count05xN( n ){
+  var i, count = [], str = "";
+//★目標9行　　    　　  //
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//★　　    　　  //
+  return str;
+}
+function funcAns(){
+  var elmN = document.getElementById( "n" );
+  var n = elmN.value;
+  var elmAns = document.getElementById( "ans" );
+  elmAns.innerHTML = count05xN( n );
+}
+</script>
+</head>
+<body>
+実験回数n
+<input id="n" type="text" value="100"/>
+<input onClick="funcAns()" type="button" value="start"/>
+<p id="ans"></p>
+</body>
+</html>
+
