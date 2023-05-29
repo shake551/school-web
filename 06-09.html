@@ -11,11 +11,11 @@ function rand255(){
 function binary(){
   var x = rand255();
 //★目標5行　　    　　  //
-
-
-
-
-
+  var i, str = "", num = x;
+  for (i=0; i<8; i++) {
+    str = num % 2 + str;
+    num = Math.floor(num / 2);
+  }
 
 
 
