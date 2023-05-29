@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="jp270405060605010322141834040satxebsyhs7">
+<title>JavaScript入門6</title>
+<script type="text/javascript">
+  function startGetLuck(){
+    setInterval("getLuck()", 1000);
+  }
+  function getLuck(){
+    var elmDt = document.getElementById("dt");
+    var dt = new Date();
+    var youbi = [ "日", "月", "火", "水", "木", "金", "土" ];
+    elmDt.innerText = dt.getFullYear() + "年";
+    elmDt.innerText += dt.getMonth() + 1 + "月";
+    elmDt.innerText += dt.getDate() + "日";
+    elmDt.innerText += "（"+youbi[dt.getDay()]+"）";
+    var elm = document.getElementById( "un" );
+    var luck = Math.floor(Math.random()*100)/100;
+    if( luck > 0.5 ){
+      elm.innerText = "大吉("+luck+")";
+    } else {
+      elm.innerText = "小吉("+luck+")";
+    }
+  }
+</script>
+</head>
+<body onLoad="startGetLuck()">
+<h1>おみくじ</h1>
+<p>今日は<span id="dt"></span>です．</p>
+<p>今の運勢は
+<span id="un">ナイショ</span>
+です</p>
+</body>
+</html>
+

@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="jp270405060605010422141834538satxebsyhs7">
+<title>JavaScript入門6</title>
+<script type="text/javascript">
+  function startClock(){
+    setInterval( "dispClock()", 1000 );
+  }
+  function dispClock(){
+    var elm = document.getElementById("clock");
+    var dt = new Date();
+    elm.innerText = dt.getFullYear() + "年";
+    elm.innerText += dt.getMonth() + 1 + "月";
+    elm.innerText += dt.getDate() + "日　";
+    elm.innerText += dt.getHours() + "時";
+    elm.innerText += dt.getMinutes() + "分";
+    elm.innerText += dt.getSeconds() + "秒";
+  }
+</script>
+</head>
+<body onLoad="startClock()">
+<h1>時計</h1>
+<span id="clock"></span>
+</body>
+</html>
+

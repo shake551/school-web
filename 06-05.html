@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="jp270405060605010522141835027satxebsyhs7">
+<title>JavaScript入門6</title>
+<script type="text/javascript">
+  function calAge(){
+    var dt1 = new Date();
+    var y1 = dt1.getFullYear();
+    var m1 = dt1.getMonth() + 1;
+    var d1 = dt1.getDate();
+    
+    var elmBirth = document.getElementById("birth");
+    var birth = elmBirth.value.split("/");
+    var y2 = Number(birth[0]);
+    var m2 = Number(birth[1]);
+    var d2 = Number(birth[2]);
+    
+    var age = y1*10000+m1*100+d1 - (y2*10000+m2*100+d2);
+    age = Math.floor(age / 10000);
+    var elmAge = document.getElementById("age");
+    elmAge.innerText = age + "歳";
+  }
+</script>
+</head>
+<body>
+<h1>今日現在の年齢を計算</h1>
+YYYY/MM/DDの形式で誕生日を入力して下さい．<br/>
+<input type="text" id="birth"/><br/>
+<input type="button" onClick="calAge()" value="年齢を求める"/><br/>
+<span id="age"></span>
+</body>
+</html>
+
