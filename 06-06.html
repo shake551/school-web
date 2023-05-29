@@ -7,13 +7,13 @@
 <script type="text/javascript">
 function funcAns(){
 //★目標7行　　    　　  //
-
-
-
-
-
-
-
+  var i, data = [], str = "", max_i = 0;
+  for (i=0; i<10; i++) {
+    data[i] = Math.random();
+      if (data[i] >= data[max_i]) {
+        max_i = i;
+      }
+  }
 
 
 
