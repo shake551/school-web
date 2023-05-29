@@ -14,14 +14,14 @@ function rand255Hex(){
 }
 function colorMatrix(){
 //★目標10行　　    　　  //
-
-
-
-
-
-
-
-
+  var i, j, str = "";
+  for (i = 0; i<10; i++) {
+    for (j = 0; j<20; j++) {
+      var color = rand255Hex() + rand255Hex() + rand255Hex();
+      str += "<span style='color:#" + color + "'>●</span>"
+    }
+    str += "<br />"
+  }
 
 
 
