@@ -11,17 +11,17 @@ function rand05(){
 function count05xN( n ){
   var i, count = [], str = "";
 //★目標9行　　    　　  //
-
-
-
-
-
-
-
-
-
-
-
+  for (i=0; i<n; i++) {
+    var num = rand05();
+    if (isNaN(count[num])) {
+      count[num] = 1;
+    } else {
+      count[num]++;
+    }
+  }
+  for (i=0; i<count.length; i++) {
+    str += i + "の出た回数は" + count[i] + "回<br />";
+  }
 
 
 
