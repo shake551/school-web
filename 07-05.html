@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="jp270405060706010505141632851satxebsyhs7">
+<title>JavaScript入門7</title>
+<script type="text/javascript">
+  window.■ここを埋める■
+    ■ここを埋める■
+      var elm = ■ここを埋める■;
+      elm.■ここを埋める■;
+    ■ここを埋める■,
+    ■ここを埋める■ );
+  function calFee(){
+    var elmMin = document.getElementById( "min" );
+    var min = Number(elmMin.value);
+    //未入力，非数値，負値の順でチェックする　　    　　  //
+    if( elmMin.value == "" || isNaN(elmMin.value) || min < 0 ){
+      alert( "駐車時間を分で入力して下さい" );
+      return;
+    }
+    var yen = Math.ceil(min/15) * 100;
+    if( yen > 1200 ){
+      yen = 1200;
+    }
+    var elmAns = document.getElementById( "ans" );
+    elmAns.innerText = "駐車料金は"+yen+"円です";
+  }
+</script>
+</head>
+<body>
+<h1>駐車料金計算</h1>
+駐車時間：<input id="min" type="text"/>分<br/>
+<input ■ここを埋める■"btn" type="button" value="駐車料金"/>
+<p id="ans"></p>
+</body>
+</html>
+
