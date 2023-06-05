@@ -5,12 +5,12 @@
 <meta name="description" content="jp270405060706010605141632838satxebsyhs7">
 <title>JavaScript入門7</title>
 <script type="text/javascript">
-  ■ここを埋める■addEventListener( "load",
-    ■ここを埋める■
-      var elm = ■ここを埋める■;
-      elm.■ここを埋める■;
-    ■ここを埋める■,
-    ■ここを埋める■ );
+  window.addEventListener( "load",
+    function() {
+      var elm = document.getElementById("btn");
+      elm.addEventListener("click", calWeight, false);
+    },
+    false );
   function calWeight(){
     var elmCm = document.getElementById( "cm" );
     var cm = Number(elmCm.value);
@@ -29,7 +29,7 @@
 <body>
 <h1>BMI=25を目指せ！</h1>
 身長：<input id="cm" type="text"/>cm<br/>
-<input ■ここを埋める■"btn" type="button" value="理想体重"/>
+<input id="btn" type="button" value="理想体重"/>
 <p id="result"></p>
 </body>
 </html>
