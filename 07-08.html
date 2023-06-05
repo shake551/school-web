@@ -6,20 +6,20 @@
 <title>JavaScript入門7</title>
 <script type="text/javascript">
   var cnt = 0;
-  window.addEventListener( ■ここを埋める■,
-    ■ここを埋める■{
+  window.addEventListener( "load",
+    function() {
       setInterval( 
-        ■ここを埋める■{
+        function() {
           cnt ++;
           var elm = document.getElementById( "cnt" );
           elm.innerText = cnt;
-        ■ここを埋める■
-        1000 ■ここを埋める■
-    }■ここを埋める■
-    false ■ここを埋める■
+	},
+        1000 );
+    },
+    false );
 </script>
 </head>
-<■ここを埋める■>
+<body>
 <h1>カウントアップ</h1>
 <span id="cnt"></span>
 </body>
