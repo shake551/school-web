@@ -5,12 +5,12 @@
 <meta name="description" content="jp270405060706010405141631727satxebsyhs7">
 <title>JavaScript入門7</title>
 <script type="text/javascript">
-  ■ここを埋める■ init(){
-    var elmOmi = ■ここを埋める■( "omi" );
+  function init(){
+    var elmOmi = document.getElementById( "omi" );
     //マウスポインタが乗ったときのイベントハンドラの登録　　    　　  //
-    elmOmi.■ここを埋める■;
+    elmOmi.addEventListener("mouseover", getLuck, false);
     //マウスポインタが外れたときのイベントハンドラの登録　　    　　  //
-    elmOmi.■ここを埋める■;
+    elmOmi.addEventListener("mouseout", clearLuck, false);
   }
   function getLuck(){
     var elm = document.getElementById( "un" );
@@ -27,8 +27,8 @@
   }
 </script>
 </head>
-<body ■ここを埋める■>
-<h1 ■ここを埋める■>おみくじ</h1>
+<body onLoad="init()">
+<h1 id="omi">おみくじ</h1>
 <p>今日の運勢は
 <span id="un">ナイショ</span>
 です</p>
