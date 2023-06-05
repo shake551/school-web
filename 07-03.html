@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="jp270405060706010305141631058satxebsyhs7">
+<title>JavaScript入門7</title>
+<script type="text/javascript">
+  ■ここを埋める■ init(){
+    var elm = ■ここを埋める■;
+    elm.■ここを埋める■;
+  }
+  function calWeight(){
+    var elmCm = document.getElementById( "cm" );
+    var cm = Number(elmCm.value);
+    //未入力，非数値，負値の順でチェックする　　    　　  //
+    if( elmCm.value == "" || isNaN(elmCm.value) || cm < 0 ){
+      alert( "正しい身長を入力して下さい" );
+      return;
+    }
+    var m = cm / 100;
+    var weight = Math.floor(25 * m * m *10) / 10;
+    var elmResult = document.getElementById( "result" );
+    elmResult.innerText = "BMI=25となる体重は"+weight+"kgです";
+  }
+</script>
+</head>
+<body ■ここを埋める■>
+<h1>BMI=25を目指せ！</h1>
+身長：<input id="cm" type="text"/>cm<br/>
+<input ■ここを埋める■"btn" type="button" value="理想体重"/>
+<p id="result"></p>
+</body>
+</html>
+
