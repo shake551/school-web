@@ -5,12 +5,12 @@
 <meta name="description" content="jp270405060706010505141632851satxebsyhs7">
 <title>JavaScript入門7</title>
 <script type="text/javascript">
-  window.■ここを埋める■
-    ■ここを埋める■
-      var elm = ■ここを埋める■;
-      elm.■ここを埋める■;
-    ■ここを埋める■,
-    ■ここを埋める■ );
+  window.addEventListener( "load",
+    function() {
+      var elm = document.getElementById("btn");
+      elm.addEventListener("click", calFee, false);
+    },
+    false );
   function calFee(){
     var elmMin = document.getElementById( "min" );
     var min = Number(elmMin.value);
@@ -31,7 +31,7 @@
 <body>
 <h1>駐車料金計算</h1>
 駐車時間：<input id="min" type="text"/>分<br/>
-<input ■ここを埋める■"btn" type="button" value="駐車料金"/>
+<input id="btn" type="button" value="駐車料金"/>
 <p id="ans"></p>
 </body>
 </html>
