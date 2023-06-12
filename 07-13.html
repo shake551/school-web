@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="jp270405060706011312141435354satxebsyhs7">
+<title>JavaScript入門7</title>
+<script type="text/javascript">
+function xdayslater( x ){
+  var days = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+//★目標7行 (12/31はx=361)　　    　　  //
+
+
+
+
+
+
+
+
+
+
+
+
+//★　　    　　  //
+  return "範囲外";
+}
+function funcAns(){
+  var x = document.getElementById( "x" ).value;
+  var elmAns = document.getElementById( "ans" );
+  elmAns.innerHTML = xdayslater( x );
+}
+</script>
+</head>
+<body>
+1月5日の
+<input id="x" type="text" size="3"/>日後
+<br/>
+<input onClick="funcAns()" type="button" value="start"/>
+<p id="ans"></p>
+</body>
+</html>
+
