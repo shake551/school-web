@@ -14,9 +14,9 @@ function swapMax( data, n ){
   }
   var tmp;
 //★目標3行　　    　　  //
-
-
-
+  tmp = data[n];
+  data[n] = data[max_i];
+  data[max_i] = tmp;
 
 
 
@@ -34,8 +34,8 @@ function funcAns(){
     data[i] = Math.random();
   }
 //★目標2行　　    　　  //
-
-
+  swapMax(data, 0);
+  swapMax(data, 1);
 
 
 
