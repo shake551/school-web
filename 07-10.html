@@ -11,12 +11,12 @@ function rand05(){
 function histogram( count, m, dt ){
   var i, j, str = "";
 //★目標6行　　    　　  //
-
-
-
-
-
-
+  for (i = 0; i<m; i++) {
+    for (j = 0; j<count[i] / dt; j++) {
+      str += "●";
+    }
+    str += count[i] + "<br/>";
+  }
 
 
 
