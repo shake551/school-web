@@ -8,13 +8,13 @@
 function xdayslater( x ){
   var days = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 //★目標7行 (12/31はx=361)　　    　　  //
-
-
-
-
-
-
-
+  var i, day = Number(x)+5;
+  for (i = 0; i<days.length; i++) {
+    if (day <= days[i]) {
+      return "1月5日の"+x+"日後は"+(i+1)+"月"+day+"日";
+    }
+    day -= days[i];
+  }
 
 
 
