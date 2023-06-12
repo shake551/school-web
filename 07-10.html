@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="jp270405060706011012141430310satxebsyhs7">
+<title>JavaScript入門7</title>
+<script type="text/javascript">
+function rand05(){
+  return Math.floor(Math.random()*6);
+}
+function histogram( count, m, dt ){
+  var i, j, str = "";
+//★目標6行　　    　　  //
+
+
+
+
+
+
+
+
+
+//★　　    　　  //
+  return str;
+}
+function count05xN_graph( n ){
+  var i, j, count = [], str, N = Number(n);
+  for( i = 0; i < 6; i ++ ){
+    count[i] = 0;
+  }
+  for( i = 0; i < N; i ++ ){
+    count[rand05()] ++;
+  }
+  str = histogram( count, 6, N/100 );
+  return str;
+}
+function funcAns(){
+  var n = document.getElementById( "n" ).value;
+  var elmAns = document.getElementById( "ans" );
+  elmAns.innerHTML = count05xN_graph( n );
+}
+</script>
+</head>
+<body>
+実験回数n
+<input id="n" type="text" value="100"/>
+<input onClick="funcAns()" type="button" value="start"/>
+<p id="ans"></p>
+</body>
+</html>
+
