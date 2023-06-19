@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="jp270405060806010219141530646satxebsyhs7">
+<title>JavaScript入門8</title>
+<style type="text/css">
+  h3 {width: 660px; background-color: #FFFFCC; padding: 4px; margin: 0px;}
+  table {padding: 0px; margin: 0px;}
+  td {padding: 10px;}
+  .col1 {width: 100px; background-color:#66CCFF}
+  .col2 {width: 500px; background-color:#efefef; line-height: 130%}
+  tr {padding: 0px; margin: 0px; }
+</style>
+<script type="text/javascript">
+  window.■ここを埋める■,
+    ■ここを埋める■{
+      var i, elm;
+      for( i = 0; i < 3; i ++ ){
+        elm = document.getElementById( "q"+(i+1) );
+        elm.addEventListener( ■ここを埋める■ );
+      }
+    ■ここを埋める■,
+    ■ここを埋める■;
+  function getAnswer(){
+    //呼び出したタグのidをthis.idで取得　　    　　  //
+    var id = this.id;
+    console.log(id);
+    //idの2文字目から後ろを取ってきて"a"の後ろに結合　　    　　  //
+    var ans = "a"+id.substr( 1 ); 
+    var elm = document.getElementById( ans );
+    //Ajax　　    　　  //
+    var req = ■ここを埋める■;
+    var file = ■ここを埋める■;
+    req.■ここを埋める■);
+    req.■ここを埋める■
+      if(■ここを埋める■){
+        elm.innerHTML = ■ここを埋める■;
+      }
+    ■ここを埋める■;
+    ■ここを埋める■;
+  }
+</script>
+</head>
+<body>
+<h1>よくあるご質問</h1>
+<table>
+<tr><td id="q1"><h3>Q1. 有線LANでインターネット接続ができない</h3></td></tr>
+<tr><td id="a1"></td></tr>
+
+<tr><td id="q2"><h3>Q2. LAN側のIPアドレスを変更したら接続できなくなった</h3></td></tr>
+<tr><td id="a2"></td></tr>
+
+<tr><td id="q3"><h3>Q3. 本製品のSSIDと暗号キーの設定値を知りたい</h3></td></tr>
+<tr><td id="a3"></td></tr>
+
+</table>
+
+</body>
+</html>
+
