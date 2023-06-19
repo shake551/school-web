@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="jp270405060806010319141531701satxebsyhs7">
+<title>JavaScript入門8</title>
+<script type="text/javascript">
+  window.■ここを埋める■,
+    ■ここを埋める■{
+      var elm = document.getElementById( "iki" );
+      elm.addEventListener( "■ここを埋める■", getRui, false );
+      var elmBtn = document.getElementById( "btn" );
+      elmBtn.addEventListener( "■ここを埋める■", confirm, false );
+    ■ここを埋める■,
+    ■ここを埋める■;
+  function getRui(){
+    var elmIki = document.getElementById( "iki" );
+    var idxIki = elmIki.■ここを埋める■;
+    var elmRui = document.getElementById( "ruiTmp" );
+    if( idxIki == 0 ){
+      elmRui.innerText = "";
+      return;
+    }
+    //Ajax　　    　　  //
+    var req = ■ここを埋める■;
+    var file = ■ここを埋める■;
+    req.■ここを埋める■);
+    req.■ここを埋める■
+      if(■ここを埋める■){
+        elmRui.innerHTML = ■ここを埋める■;
+      }
+    ■ここを埋める■;
+    ■ここを埋める■;
+  }
+  function confirm(){
+    var elmKekka = document.getElementById( "kekka" );
+    var elmIki = document.getElementById( "iki" );
+    var idxIki = elmIki.■ここを埋める■;
+    if( idxIki == 0 ){
+      elmKekka.innerText = "学域を選択して下さい";
+      return;
+    }
+    var elmRui = document.getElementById( "■ここを埋める■" );
+    var idxRui = elmRui.■ここを埋める■;
+    if( idxRui == 0 ){
+      elmKekka.innerText = "学類を選択して下さい";
+      return;
+    }
+    var iki = elmIki.options[idxIki].value;
+    var rui = elmRui.options[idxRui].value;
+    elmKekka.innerText = "あなたは "+iki+" "+rui+" ですね";
+  }
+</script>
+</head>
+<body>
+<h1>所属確認</h1>
+<p>学域：
+<select id="iki">
+<option value="未" checked>選択して下さい</option>
+<option value="現代システム科学域">現代システム科学域</option>
+<option value="工学域">工学域</option>
+<option value="生命環境科学域">生命環境科学域</option>
+<option value="地域保健学域">地域保健学域</option>
+</select>
+</p>
+
+<p id="ruiTmp"></p>
+
+<input id="btn" type="button" value="決定"/>
+
+<p id="kekka"></p>
+</body>
+</html>
+
