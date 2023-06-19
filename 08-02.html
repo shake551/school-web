@@ -35,7 +35,7 @@
     req.open("GET", file+"?r="+Math.random());
     req.onreadystatechange = function() {
       if(req.readyState == 4 && req.status == 200){
-        elm.innerHTML += req.responseText;
+        elm.innerHTML = req.responseText;
       }
     };
     req.send();
