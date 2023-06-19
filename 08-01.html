@@ -6,27 +6,27 @@
 <title>JavaScript入門8</title>
 <script type="text/javascript">
   var part = 1;
-  window.■ここを埋める■,
-    ■ここを埋める■{
-      var elm = document.getElementById( "■ここを埋める■" );
-      elm.addEventListener( "■ここを埋める■ );
-    ■ここを埋める■,
-    ■ここを埋める■ );
+  window.addEventListener("load",
+    function() {
+      var elm = document.getElementById( "btn" );
+      elm.addEventListener( "click", getImage, false );
+    },
+    false );
   function getImage(){
     if( part == 5 ){
       return;
     }
-    var elmDest = document.getElementById( "■ここを埋める■" );
+    var elmDest = document.getElementById( "images" );
     //Ajax　　    　　  //
-    var req = ■ここを埋める■;
+    var req = new XMLHttpRequest();
     var file = "share/imglist"+part+".html";
-    req.■ここを埋める■);
-    req.■ここを埋める■{
-      if(■ここを埋める■){
-        elmDest.innerHTML ■ここを埋める■;
+    req.open("GET", file+"?r="+Math.random());
+    req.onreadystatechange = function() {
+      if(req.readyState == 4 && req.status == 200){
+        elmDest.innerHTML += req.responseText;
       }
-    ■ここを埋める■;
-    ■ここを埋める■;
+    };
+    req.send();
     part ++;
   } 
 </script>
