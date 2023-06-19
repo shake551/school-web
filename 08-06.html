@@ -25,14 +25,14 @@ function count05xNxK_graph( n, k ){
     count[i] = 0;
   }
 //★目標8行　　    　　  //
-
-
-
-
-
-
-
-
+  for( i = 0; i < N; i ++ ){
+    sum = 0;
+    for (j = 0; j<K; j++) {
+      sum += rand05();
+    }
+    count[sum] ++;
+  }
+  return histogram( count, 5, N/100 );
 
 
 
