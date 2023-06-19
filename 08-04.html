@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="jp270405060806010419141534550satxebsyhs7">
+<title>JavaScript入門8</title>
+<script type="text/javascript">
+  window.■ここを埋める■,
+    ■ここを埋める■{
+      var elmArea = document.getElementById( "area" );
+      elmArea.addEventListener( "■ここを埋める■", getCityList, false );
+      var elmBtn = ■ここを埋める■;
+      elmBtn.■ここを埋める■;
+    ■ここを埋める■,
+    ■ここを埋める■;
+  function getCityList(){
+    var elmArea = document.getElementById( "area" );
+    var idx = elmArea.selectedIndex;
+    var elmCityP = document.getElementById( "city_p" );
+    //Ajax　　    　　  //
+    var req = new XMLHttpRequest();
+    var file = ■ここを埋める■;
+    req.■ここを埋める■);
+    req.■ここを埋める■{
+      if(■ここを埋める■){
+        elmCityP.innerHTML = ■ここを埋める■;
+      }
+    ■ここを埋める■;
+    ■ここを埋める■;
+  }
+  function confirm(){
+    var elmKekka = ■ここを埋める■;
+    var elmArea = ■ここを埋める■;
+    var idxArea = ■ここを埋める■;
+    if( idxArea == 0 ){
+      elmKekka.innerText = "エリアを選択して下さい";
+      return;
+    }
+    var elmCity = ■ここを埋める■;
+    var idxCity = ■ここを埋める■;
+    if( idxCity == 0 ){
+      elmKekka.innerText = "都市を選択して下さい";
+      return;
+    }
+    var area = ■ここを埋める■;
+    var city = ■ここを埋める■;
+    elmKekka.innerText = "目的地は "+area+" "+city+" ですね";
+  }
+</script>
+</head>
+<body>
+<h1>海外旅行</h1>
+<p id="area_p">エリア選択
+<select id="area">
+<option value="0" checked>エリアを選んで下さい</option>
+<option value="アジア">アジア</option>
+<option value="ハワイ・グアム">ハワイ・グアム</option>
+<option value="オセアニア">オセアニア</option>
+<option value="北米">北米</option>
+<option value="ヨーロッパ">ヨーロッパ</option>
+<option value="中南米">中南米</option>
+<option value="中近東・アフリカ">中近東・アフリカ</option>
+</select>
+</p>
+<p id="city_p"></p>
+<input id="btn" type="button" value="決定"/>
+<p id="kekka"></p>
+</body>
+</html>
+
