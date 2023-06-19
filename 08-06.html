@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="jp270405060806010619141535659satxebsyhs7">
+<title>JavaScript入門8</title>
+<script type="text/javascript">
+function rand05(){
+  return Math.floor(Math.random()*6);
+}
+function histogram( count, m, dt ){
+  var i, j, str = "";
+  for( i = 0; i <= m; i ++ ){
+    str += ("00"+i+":").slice(-4)+" ";
+    for( j = 0; j < Math.floor(count[i]/dt); j ++ ){
+      str += "●";
+    }
+    str += count[i]+"<br/>";
+  }
+  return str;
+}
+function count05xNxK_graph( n, k ){
+  var i, j, sum, count = [], N = Number(n), K = Number(k);
+  for( i = 0; i <= 5*K; i ++ ){
+    count[i] = 0;
+  }
+//★目標8行　　    　　  //
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//★　　    　　  //
+}
+function funcAns(){
+  var n = document.getElementById( "n" ).value;
+  var k = document.getElementById( "k" ).value;
+  var elmAns = document.getElementById( "ans" );
+  elmAns.innerHTML = count05xNxK_graph( n, k );
+}
+</script>
+</head>
+<body>
+実験回数n
+<input id="n" type="text" value="100000"/><br/>
+一様乱数の加算個数k
+<input id="k" type="text" value="1"/><br/>
+<input onClick="funcAns()" type="button" value="start"/>
+<p id="ans"></p>
+</body>
+</html>
+
