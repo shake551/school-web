@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="jp270405060806010719141631651satxebsyhs7">
+<title>JavaScript入門8</title>
+<script type="text/javascript">
+var c = 0;
+function move(){
+  var idb, idr;
+//★目標2行　　    　　  //
+
+
+
+
+
+//★　　    　　  //
+  document.getElementById( idb ).style.color="black";
+  document.getElementById( idr ).style.color="red";
+  c ++;
+}
+function blackboard(){
+  var i, j, str = "";
+  for( j = 0; j < 5; j ++ ){
+    id = "0xx"+j
+    str += "<span id='"+id+"'>●</span>";
+  }
+  var elmAns = document.getElementById( "ans" );
+  elmAns.innerHTML = str;
+}
+function funcAns(){
+}
+</script>
+</head>
+<body onLoad="blackboard()">
+<p id="ans"></p>
+<input onClick="move()" type="button" value="move"/>
+</body>
+</html>
+
