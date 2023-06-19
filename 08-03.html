@@ -5,43 +5,43 @@
 <meta name="description" content="jp270405060806010319141531701satxebsyhs7">
 <title>JavaScript入門8</title>
 <script type="text/javascript">
-  window.■ここを埋める■,
-    ■ここを埋める■{
+  window.addEventListener("load",
+    function() {
       var elm = document.getElementById( "iki" );
-      elm.addEventListener( "■ここを埋める■", getRui, false );
+      elm.addEventListener( "change", getRui, false );
       var elmBtn = document.getElementById( "btn" );
-      elmBtn.addEventListener( "■ここを埋める■", confirm, false );
-    ■ここを埋める■,
-    ■ここを埋める■;
+      elmBtn.addEventListener( "click", confirm, false );
+    },
+    false);
   function getRui(){
     var elmIki = document.getElementById( "iki" );
-    var idxIki = elmIki.■ここを埋める■;
+    var idxIki = elmIki.selectedIndex;
     var elmRui = document.getElementById( "ruiTmp" );
     if( idxIki == 0 ){
       elmRui.innerText = "";
       return;
     }
     //Ajax　　    　　  //
-    var req = ■ここを埋める■;
-    var file = ■ここを埋める■;
-    req.■ここを埋める■);
-    req.■ここを埋める■
-      if(■ここを埋める■){
-        elmRui.innerHTML = ■ここを埋める■;
+    var req = new XMLHttpRequest();
+    var file = "share/gakurui"+idxIki+".html";
+    req.open("GET", file+"?r="+Math.random());
+    req.onreadystatechange = function() {
+      if(req.readyState == 4 && req.status == 200){
+        elmRui.innerHTML = req.responseText;
       }
-    ■ここを埋める■;
-    ■ここを埋める■;
+    };
+    req.send();
   }
   function confirm(){
     var elmKekka = document.getElementById( "kekka" );
     var elmIki = document.getElementById( "iki" );
-    var idxIki = elmIki.■ここを埋める■;
+    var idxIki = elmIki.selectedIndex;
     if( idxIki == 0 ){
       elmKekka.innerText = "学域を選択して下さい";
       return;
     }
-    var elmRui = document.getElementById( "■ここを埋める■" );
-    var idxRui = elmRui.■ここを埋める■;
+    var elmRui = document.getElementById( "rui" );
+    var idxRui = elmRui.selectedIndex;
     if( idxRui == 0 ){
       elmKekka.innerText = "学類を選択して下さい";
       return;
