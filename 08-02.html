@@ -13,15 +13,15 @@
   tr {padding: 0px; margin: 0px; }
 </style>
 <script type="text/javascript">
-  window.■ここを埋める■,
-    ■ここを埋める■{
+  window.addEventListener("load",
+    function() {
       var i, elm;
       for( i = 0; i < 3; i ++ ){
         elm = document.getElementById( "q"+(i+1) );
-        elm.addEventListener( ■ここを埋める■ );
+        elm.addEventListener( "click", getAnswer, false );
       }
-    ■ここを埋める■,
-    ■ここを埋める■;
+    },
+    false);
   function getAnswer(){
     //呼び出したタグのidをthis.idで取得　　    　　  //
     var id = this.id;
@@ -30,15 +30,15 @@
     var ans = "a"+id.substr( 1 ); 
     var elm = document.getElementById( ans );
     //Ajax　　    　　  //
-    var req = ■ここを埋める■;
-    var file = ■ここを埋める■;
-    req.■ここを埋める■);
-    req.■ここを埋める■
-      if(■ここを埋める■){
-        elm.innerHTML = ■ここを埋める■;
+    var req = new XMLHttpRequest();
+    var file = "share/"+ans+".html";
+    req.open("GET", file+"?r="+Math.random());
+    req.onreadystatechange = function() {
+      if(req.readyState == 4 && req.status == 200){
+        elm.innerHTML += req.responseText;
       }
-    ■ここを埋める■;
-    ■ここを埋める■;
+    };
+    req.send();
   }
 </script>
 </head>
