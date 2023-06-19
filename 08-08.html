@@ -8,11 +8,11 @@
 function funcAns(){
   var str = document.getElementById( "str" ).value;
 //★目標5行　　    　　  //
-
-
-
-
-
+  var i, str2 = "", tmp = str.split("xyz");
+  str2 += tmp[0];
+  for (i = 1; i<tmp.length; i++) {
+    str2 += "XYZ" + tmp[i];
+  }
 
 
 
