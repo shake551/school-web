@@ -7,39 +7,39 @@
 <script type="text/javascript">
   window.addEventListener( "load",
     function(){
-      var elmBtn = ■ここを埋める■;
-      elmBtn.■ここを埋める■;
+      var elmBtn = document.getElementById("btn");
+      elmBtn.addEventListener("click", loadJSON, false);
     },
     false );
   //JSONファイルの読み込み　　    　　  //
   function loadJSON(){
-    var req = ■ここを埋める■;
+    var req = new XMLHttpRequest();
     var file = "share/09-kisodata.json";
-    req.■ここを埋める■;
-    ■ここを埋める■ = function(){
-      ■ここを埋める■{
-        ■ここを埋める■;
+    req.open("GET", file+"?r="+Math.random());
+    req.onreadystatechange = function() {
+      if(req.readyState == 4 && req.status == 200){
+        dispData(req.responseText);
       }
-    ■ここを埋める■;
-    ■ここを埋める■;
+    };
+    req.send();
   }
   //JSONデータからtabelを作成　　    　　  //
   function dispData( data ){
-    var kisodata = ■ここを埋める■;
+    var kisodata = eval("(" + data + ")");
     var i;
     var str = "<table border=1><tr><td>都道府県</td><td>人口</td><td>面積</td><td>人口密度</td></tr>";
-    for( i = 0; i < ■ここを埋める■; i ++ ){
+    for( i = 0; i < kisodata.length; i ++ ){
       str += "<tr>";
-      str += "<td>" + ■ここを埋める■ + "</td>";
-      str += "<td align='right'>" + ■ここを埋める■ + "</td>";
-      str += "<td align='right'>" + ■ここを埋める■ + "</td>";
-      str += "<td align='right'>" + Math.floor(kisodata[i].pop / kisodata[i]■ここを埋める■ + "</td>";
+      str += "<td>" + kisodata[i].name + "</td>";
+      str += "<td align='right'>" + kisodata[i].pop + "</td>";
+      str += "<td align='right'>" + kisodata[i].area + "</td>";
+      str += "<td align='right'>" + Math.floor(kisodata[i].pop / kisodata[i].area * 10) / 10 + "</td>";
       str += "</tr>";
     }
     str += "</table>";
     //tableの代入　　    　　  //
-    var elm = ■ここを埋める■;
-    elm.innerHTML = ■ここを埋める■;
+    var elm = document.getElementById("kekka");
+    elm.innerHTML = str;
   }
 </script>
 </head>
