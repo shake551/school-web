@@ -40,8 +40,8 @@
     function(){
       var elmArea = document.getElementById( "area" );
       elmArea.addEventListener( "change", setCity, false );
-      var elmBtn = ■ここを埋める■;
-      elmBtn.■ここを埋める■;
+      var elmBtn = document.getElementById("btn");
+      elmBtn.addEventListener("click", confirm, false);
     },
     false );
   //オブジェクトの配列citiesからセレクトボックスを作ってcity_pに設置　　    　　  //
@@ -52,30 +52,30 @@
     var str = "<select id='city'><option>目的地を選択して下さい</option>";
     var i;
     //注意！ idxAreaはそのまま使えない．Areaのoption数は8個，配列citiesの要素数は7個　　    　　  //
-    for( i = 0; i < ■ここを埋める■; i ++ ){
-      var c = ■ここを埋める■;
+    for( i = 0; i <cities[idxArea-1].city.length; i ++ ){
+      var c = cities[idxArea-1].city[i];
       str += "<option>"+c+"</option>";
     }
     str += "</select>";
-    var elmCityP = ■ここを埋める■;
-    elmCityP.innerHTML = ■ここを埋める■;
+    var elmCityP = document.getElementById("city_p");
+    elmCityP.innerHTML = str;
   }
   //確認ボタン　　    　　  //
   function confirm(){
-    var elmKekka = ■ここを埋める■;
+    var elmKekka = document.getElementById("kekka");
     if( idxArea == "" || idxArea == 0 ){
       elmKekka.innerText = "エリアを選択して下さい";
       return;
     }
-    var elmCity = ■ここを埋める■;
-    var idxCity = ■ここを埋める■;
+    var elmCity = document.getElementById("city");
+    var idxCity = elmCity.selectedIndex;
     if( idxCity == 0 ){
       elmKekka.innerText = "都市を選択して下さい";
       return;
     }
     //注意！ idxArea，idxCityはそのまま使えない．　　    　　  //
-    var areaName = cities■ここを埋める■;
-    var cityName = cities■ここを埋める■;
+    var areaName = cities[idxArea-1].area;
+    var cityName = cities[idxArea-1].city[idxCity-1];
     elmKekka.innerText = "ご旅行先は"+areaName+"の"+cityName+"ですね";
   }
 </script>
