@@ -7,19 +7,20 @@
 <script type="text/javascript">
 function base11(){
 //★目標14行　　    　　  //
-
-
-
-
-
-
-
-
-
-
-
-
-
+  var str = "10進数:1進数<br/>", i, j;
+  for (i = 0; i<=11 * 11 - 1; i++) {
+    var tmp = "", target = i;
+    for (j = 0; j<2; j++) {
+      var amari = target % 11;
+      if (amari == 10) {
+        tmp = "A" + tmp;
+      } else {
+        tmp = amari + tmp;
+      }
+      target = Math.floor(target / 11);
+    }
+    str += i + ":" + tmp + "<br/>";
+  }
 
 
 
@@ -31,7 +32,7 @@ function base11(){
 }
 function funcAns(){
 //★　　    　　  //
-
+  var elmAns = document.getElementById("ans");
 
 //★　　    　　  //
   elmAns.innerHTML = base11();
