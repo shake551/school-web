@@ -69,7 +69,7 @@
       str += "<td>" + kisodata[i].name + "</td>";
       str += "<td align='right'>" + kisodata[i].pop + "</td>";
       str += "<td align='right'>" + kisodata[i].area + "</td>";
-      str += "<td align='right'>" + Math.floor(kisodata[i].pop / kisodata[i].area) + "</td>";
+      str += "<td align='right'>" + Math.floor(kisodata[i].pop / kisodata[i].area * 10) / 10 + "</td>";
       str += "</tr>";
     }
     str += "</table>";
