@@ -16,9 +16,9 @@ function swapMax( data, n ){
   data[n] = data[max_i];
   data[max_i] = tmp;
 //★目標3行　　    　　  //
-
-
-
+  if (n <= data.length-2) {
+    swapMax(data, n+1);
+  }
 
 
 
@@ -34,7 +34,7 @@ function funcAns(){
      str += data[i] + "<br/>";
   }
 //★目標1行　　    　　  //
-
+  var elmAns = document.getElementById("kekka");
 
 //★　　    　　  //
   elmAns.innerHTML = str + "END<br/>";
