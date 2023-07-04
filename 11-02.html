@@ -6,13 +6,13 @@
 <title>JavaScript入門11</title>
 <script src="./jquery-1.12.4.min.js"></script>
 <script type="text/javascript">
-  ■ここを埋める■
-    ■ここを埋める■(checkMail);
-  ■ここを埋める■
-  ■ここを埋める■
-    var str = ■ここを埋める■
+  $(function(){
+    $("#btn").click(checkMail);
+  });
+  function checkMail(){
+    var str = $("#str").val();
     //数字のチェックには¥dを使う　　    　　  //
-    if( ■ここを埋める■ ){
+    if( /^0\d{2}-\d{4}-\d{4}$/.test(str) ){
       $("#kekka").html( "登録完了" );
     } else {
       $("#kekka").html( "正しい電話番号を登録して下さい" );
