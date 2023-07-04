@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="jp270405061107010304141034229satxebsyhs7">
+<title>JavaScript入門11</title>
+<script src="./jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+  ■ここを埋める■
+    ■ここを埋める■(checkCardInfo);
+  ■ここを埋める■
+  ■ここを埋める■
+    var numb = ■ここを埋める■
+    var expm = ■ここを埋める■
+    var expy = ■ここを埋める■
+    var name = ■ここを埋める■
+    //数字には¥dを使う　　    　　  //
+    if( ! ■ここを埋める■ ){
+      $("#kekka").html( "正しいカード番号を入力して下さい" );
+    //月は01から09または10,11,12のいずれかのみOK(^....$|^....$)　　    　　  //
+    } else if( ! ■ここを埋める■ ){
+      $("#kekka").html( "正しい有効期限（月）を入力して下さい" );
+    //年は4桁の数字ならOKとする　　    　　  //
+    } else if( ! ■ここを埋める■ ){
+      $("#kekka").html( "正しい有効期限（年）を入力して下さい" );
+    //名前は英字大文字またはスペース(¥s)が文頭から文末まで1つ以上連続していればOKとする　　    　　  //
+    } else if( ! ■ここを埋める■ ){
+      $("#kekka").html( "正しい名前を入力して下さい" );
+    } else {
+      $("#kekka").html( "登録完了" );
+    }
+  }
+  </script>
+</head>
+<body>
+<h1>クレジットカード登録</h1>
+<p>クレジットカード情報を入力して下さい</p>
+カード番号：<input id="numb" type="text" size="50"/><br/>
+※4桁毎にハイフンを入れて下さい．<br/>
+有効期限：<input id="expm" type="text"/>月<br/>
+※2桁で入力して下さい．<br/>
+有効期限：<input id="expy" type="text"/>年<br/>
+※4桁で入力して下さい．<br/>
+名前：<input id="name" type="text"/><br/>
+※英字大文字で入力して下さい．<br/>
+<input id="btn" type="button" value="登録"/>
+<p id="kekka"></p>
+</body>
+</html>
+
