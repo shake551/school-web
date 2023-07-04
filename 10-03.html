@@ -4,15 +4,15 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta name="description" content="jp270405061007010304140934910satxebsyhs7">
 <title>JavaScript入門10</title>
-<script src="■ここを埋める■"></script>
+<script src="./jquery-1.12.4.min.js"></script>
 <script type="text/javascript">
   $(function(){
-    ■ここを埋める■;
+    $("#btn").click(mile2kiro);
   });
   function mile2kiro(){
-    var mile = ■ここを埋める■;
+    var mile = $("#mile").val();
     var kiro = Math.floor(mile*1.609*100+0.5)/100;
-    ■ここを埋める■( mile + "マイルは" + kiro + "キロメートル" );
+    $("#ans").text( mile + "マイルは" + kiro + "キロメートル" );
   }
 </script>
 </head>
