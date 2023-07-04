@@ -4,18 +4,18 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta name="description" content="jp270405061007010204140934620satxebsyhs7">
 <title>JavaScript入門10</title>
-<script src="■ここを埋める■"></script>
+<script src="./jquery-1.12.4.min.js"></script>
 <script type="text/javascript">
   $(function(){
-    ■ここを埋める■;
+    $("#btn").click(calFee);
   });
   function calFee(){
-    var min = ■ここを埋める■;
+    var min = $("#min").val();
     var yen = Math.ceil(min/15) * 100;
     if( yen > 1200 ){
       yen = 1200;
     }
-    ■ここを埋める■( "駐車料金は"+yen+"円です" );
+    $("#ans").text( "駐車料金は"+yen+"円です" );
   }
 </script>
 </head>
