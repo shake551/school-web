@@ -4,34 +4,34 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta name="description" content="jp270405061007010504140935402satxebsyhs7">
 <title>JavaScript入門10</title>
-<script src="■ここを埋める■"></script>
+<script src="./jquery-1.12.4.min.js"></script>
 <script type="text/javascript">
   $(function(){
     //マウスポインタが乗ったとき　　    　　  //
-    ■ここを埋める■;
+    $("#omi").mouseover(getLuck);
     //マウスポインタが外れたとき　　    　　  //
-    ■ここを埋める■;
+    $("#omi").mouseout(clearLuck);
   });
   function getLuck(){
     var luck = Math.floor(Math.random()*100)/100;
     if( luck > 0.5 ){
-      ■ここを埋める■( "大吉("+luck+")" );
+      $("#un").text( "大吉("+luck+")" );
       // 文字色の変更　　    　　  //
-      ■ここを埋める■;
+      $("#un").css("color", "red");
     } else {
-      ■ここを埋める■( "小吉("+luck+")" );
+      $("#un").text( "小吉("+luck+")" );
       // 文字色の変更　　    　　  //
-      ■ここを埋める■;
+      $("#un").css("color", "black");
     }
     // 文字サイズの変更　　    　　  //
-    ■ここを埋める■;
+    $("#un").css("fontSize", 100*luck + "px");
   }
   function clearLuck(){
-    ■ここを埋める■( "ナイショ" );
+    $("#un").text( "ナイショ" );
     // 文字色の変更　　    　　  //
-    ■ここを埋める■;
+    $("#un").css("color", "black");
     // 文字サイズの変更　　    　　  //
-    ■ここを埋める■;
+    $("#un").css("fontSize", "100%");
   }
 </script>
 </head>
