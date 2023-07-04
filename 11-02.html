@@ -12,7 +12,7 @@
   function checkMail(){
     var str = $("#str").val();
     //数字のチェックには¥dを使う　　    　　  //
-    if( /^0d{2}\-\d{4}\-\d{4}$/.test(str) ){
+    if( /^0\d{2}\-\d{4}\-\d{4}$/.test(str) ){
       $("#kekka").html( "登録完了" );
     } else {
       $("#kekka").html( "正しい電話番号を登録して下さい" );
