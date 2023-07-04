@@ -47,7 +47,7 @@
     kekka += "24 文字列がac.jpで終わる?: " + /ac\.jp$/.test(str) + "<br/>";
 
     kekka += "25 文字列が任意の数字3文字のみである?: " + /^\d{3}$/.test(str) + "<br/>";
-    kekka += "26 文字列が任意の3文字のみである?: " + /^.{3}$/.test(str) + "<br/>";
+    kekka += "26 文字列が任意の3文字のみである?: " + /^...$/.test(str) + "<br/>";
     kekka += "27 文字列がhttpで始まりcomで終わる?: " + /^http.*com$/.test(str) + "<br/>";
 
     $("#kekka").html( kekka );
