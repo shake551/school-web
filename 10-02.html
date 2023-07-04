@@ -10,7 +10,7 @@
     $("#btn").click(calFee);
   });
   function calFee(){
-    var min = $("#min").val();
+    var min = Number($("#min").val());
     var yen = Math.ceil(min/15) * 100;
     if( yen > 1200 ){
       yen = 1200;
