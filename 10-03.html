@@ -10,7 +10,7 @@
     $("#btn").click(mile2kiro);
   });
   function mile2kiro(){
-    var mile = $("#mile").val();
+    var mile = Number($("#mile").val());
     var kiro = Math.floor(mile*1.609*100+0.5)/100;
     $("#ans").text( mile + "マイルは" + kiro + "キロメートル" );
   }
