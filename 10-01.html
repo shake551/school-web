@@ -10,7 +10,7 @@
     $("#btn").click(calSqrt);
   });
   function calSqrt(){
-    var x = $("#x").val();
+    var x = Number($("#x").val());
     $("#ans").text( "xの平方根は"+Math.sqrt(x) );
   }
 </script>
