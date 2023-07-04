@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="jp270405061107010104141031431satxebsyhs7">
+<title>JavaScript入門11</title>
+<style>
+  p {line-height: 140%}
+</style>
+<script src="./jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+  $(function(){
+    $("#btn").click(checkAll);
+  });
+
+  function checkAll(){
+    var str = $("#str").val();
+    var kekka = "";
+    
+    kekka += "01 文字列中に1,3,5のいずれかがある?: " + /[135]/.test(str) + "<br/>";
+    kekka += "02 文字列中に2～7のいずれかがある?: " + /[2-7]/.test(str) + "<br/>";
+    kekka += "03 文字列中にa～mのいずれかがある?: " + /[a-m]/.test(str) + "<br/>";
+    kekka += "04 文字列中にa～mか2～7のいずれかがある?: " + /[a-m2-7]/.test(str) + "<br/>";
+    kekka += "05 文字列中にa～mか2～7かZかYのいずれかがある?: " + /[a-m2-7ZY]/.test(str) + "<br/>";
+    kekka += "06 文字列中にa～zのいずれかの文字の直後に@がある?: " + /[a-z]@/.test(str) + "<br/>";
+    kekka += "07 文字列中にa～zのいずれかの文字が連続して3つある?: " + /[a-z]{3}/.test(str) + "<br/>";
+
+    kekka += "08 文字列中にabz,acz,adz,aezのいずれかがある: " + /a[b-e]z/.test(str) + "<br/>";
+    kekka += "09 文字列は1個の任意の文字がaとzに挟まれている？: " + /a.z/.test(str) + "<br/>";
+    kekka += "10 文字列は2個の任意の文字がaとzに挟まれている？: " + /a..z/.test(str) + "<br/>";
+    kekka += "11 文字列は1個以上の任意の文字がaとzに挟まれている？: " + /a.+z/.test(str) + "<br/>";
+    kekka += "12 文字列は0個以上の任意の文字がaとzに挟まれている？: " + /a.*z/.test(str) + "<br/>";
+    kekka += "13 文字列は0個以上の任意の文字がhttpとcomに挟まれている？: " + /http.*com/.test(str) + "<br/>";
+
+    kekka += "14 文字列中に/がある?: " + /\//.test(str) + "<br/>";
+    kekka += "15 文字列中に.がある?: " + /\./.test(str) + "<br/>";
+    kekka += "16 文字列中に^がある?: " + /\^/.test(str) + "<br/>";
+    kekka += "17 文字列中に$がある?: " + /\$/.test(str) + "<br/>";
+    kekka += "18 文字列中に-がある?: " + /\-/.test(str) + "<br/>";
+    kekka += "19 文字列中にスペースがある?: " + /\s/.test(str) + "<br/>";
+    kekka += "20 文字列中に数字（0～9のいずれか）がある?: " + /\d/.test(str) + "<br/>";
+
+    kekka += "21 文字列がn～rのいずれかで始まる?: " + /^[n-r]/.test(str) + "<br/>";
+    kekka += "22 文字列が任意の1文字＋数字で始まる?: " + /^.\d/.test(str) + "<br/>";
+
+    kekka += "23 文字列がa～fのいずれかで終わる?: " + /[a-f]$/.test(str) + "<br/>";
+    kekka += "24 文字列がac.jpで終わる?: " + /ac\.jp$/.test(str) + "<br/>";
+
+    kekka += "25 文字列が任意の数字3文字のみである?: " + /^\d{3}$/.test(str) + "<br/>";
+    kekka += "26 文字列が任意の3文字のみである?: " + /^.{3}$/.test(str) + "<br/>";
+    kekka += "27 文字列がhttpで始まりcomで終わる?: " + /^http.*com$/.test(str) + "<br/>";
+
+    $("#kekka").html( kekka );
+  }
+</script>
+</head>
+<body>
+<h1>正規表現入門</h1>
+文字列：<input id="str" type="text"/><br/>
+<input id="btn" type="button" value="チェック"/>
+<p id="kekka">結果</p>
+</body>
+</html>
+
