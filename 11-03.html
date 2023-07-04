@@ -6,25 +6,25 @@
 <title>JavaScript入門11</title>
 <script src="./jquery-1.12.4.min.js"></script>
 <script type="text/javascript">
-  ■ここを埋める■
-    ■ここを埋める■(checkCardInfo);
-  ■ここを埋める■
-  ■ここを埋める■
-    var numb = ■ここを埋める■
-    var expm = ■ここを埋める■
-    var expy = ■ここを埋める■
-    var name = ■ここを埋める■
+  $(function(){
+    $("#btn").click(checkCardInfo);
+  });
+  function checkCardInfo(){
+    var numb = $("#numb").val();
+    var expm = $("#expm").val();
+    var expy = $("#expy").val();
+    var name = $("#name").val();
     //数字には¥dを使う　　    　　  //
-    if( ! ■ここを埋める■ ){
+    if( ! /^\d{4}\-\d{4}\-\d{4}\-\d{4}$/.test(numb) ){
       $("#kekka").html( "正しいカード番号を入力して下さい" );
     //月は01から09または10,11,12のいずれかのみOK(^....$|^....$)　　    　　  //
-    } else if( ! ■ここを埋める■ ){
+    } else if( ! /^0[1-9]$|^1[0-2]$/.test(expm) ){
       $("#kekka").html( "正しい有効期限（月）を入力して下さい" );
     //年は4桁の数字ならOKとする　　    　　  //
-    } else if( ! ■ここを埋める■ ){
+    } else if( ! /^\d{4}$/.test(expy) ){
       $("#kekka").html( "正しい有効期限（年）を入力して下さい" );
     //名前は英字大文字またはスペース(¥s)が文頭から文末まで1つ以上連続していればOKとする　　    　　  //
-    } else if( ! ■ここを埋める■ ){
+    } else if( ! /^[A-Z\s]+$/.test(name) ){
       $("#kekka").html( "正しい名前を入力して下さい" );
     } else {
       $("#kekka").html( "登録完了" );
