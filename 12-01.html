@@ -10,12 +10,12 @@
 <script src="jquery-1.12.4.min.js"></script>
 <script type="text/javascript">
   //キャンバス用変数の宣言　　    　　  //
-  ■ここを埋める■;
+  var canvas;
   //コンテキスト用変数の宣言　　    　　  //
-  ■ここを埋める■;
+  var ctx;
   $(function(){
-    canvas = ■ここを埋める■;
-    ctx = ■ここを埋める■;
+    canvas = $("#myCanvas")[0];
+    ctx = canvas.getContext("2d");
     $("#drawLineBtn").click( drawLine );
     $("#clearCanvasBtn").click( clearCanvas );
   });
@@ -26,22 +26,22 @@
     var x = 150;
     var y = 125;
     //ペン先を置く　　    　　  //
-    ctx.■ここを埋める■;
+    ctx.moveTo(x, y);
     for( var i = 0; i < 5; i ++ ){
-      x += ■ここを埋める■;
-      y += ■ここを埋める■;
+      x += 20;
+      y += 50;
       //ペン先を移動する　　    　　  //
-      ctx.■ここを埋める■;
-      x += ■ここを埋める■;
-      y += ■ここを埋める■;
+      ctx.lineTo(x, y);
+      x += 20;
+      y += -50;
       //ペン先を移動する　　    　　  //
-      ctx.■ここを埋める■;
+      ctx.lineTo(x, y);
     }
     //パスを描画する　　    　　  //
-    ctx.■ここを埋める■;
+    ctx.stroke();
   }
   function clearCanvas(){
-    ctx.■ここを埋める■( 0, 0, 500, 300 );
+    ctx.clearRect( 0, 0, 500, 300 );
   }
 </script>
 </head>
