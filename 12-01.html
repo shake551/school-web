@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="ja-JP">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="jp270405061207010110141430647satxebsyhs7">
+<title>HTML5 canvas入門</title>
+<style type="text/css">
+  canvas { background-color: #E0E0E0; }
+</style>
+<script src="jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+  //キャンバス用変数の宣言　　    　　  //
+  ■ここを埋める■;
+  //コンテキスト用変数の宣言　　    　　  //
+  ■ここを埋める■;
+  $(function(){
+    canvas = ■ここを埋める■;
+    ctx = ■ここを埋める■;
+    $("#drawLineBtn").click( drawLine );
+    $("#clearCanvasBtn").click( clearCanvas );
+  });
+  function drawLine(){
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = "#000000";
+    ctx.beginPath();
+    var x = 150;
+    var y = 125;
+    //ペン先を置く　　    　　  //
+    ctx.■ここを埋める■;
+    for( var i = 0; i < 5; i ++ ){
+      x += ■ここを埋める■;
+      y += ■ここを埋める■;
+      //ペン先を移動する　　    　　  //
+      ctx.■ここを埋める■;
+      x += ■ここを埋める■;
+      y += ■ここを埋める■;
+      //ペン先を移動する　　    　　  //
+      ctx.■ここを埋める■;
+    }
+    //パスを描画する　　    　　  //
+    ctx.■ここを埋める■;
+  }
+  function clearCanvas(){
+    ctx.■ここを埋める■( 0, 0, 500, 300 );
+  }
+</script>
+</head>
+
+<body>
+<canvas id="myCanvas" width="500" height="300"></canvas>
+<br/>
+<input id="drawLineBtn" type="button" value="ジグザグ">
+<input id="clearCanvasBtn" type="button" value="クリア">
+</body>
+</html>
+
