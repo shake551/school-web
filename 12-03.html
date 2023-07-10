@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="ja-JP">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="jp270405061207010310141431940satxebsyhs7">
+<title>HTML5 canvas入門</title>
+<style type="text/css">
+  canvas { background-color: #E0E0E0; }
+</style>
+<script src="jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+  var canvas;
+  var ctx;
+  var x1, y1, x2, y2; //クリックされた位置を記憶する変数　　    　　  //
+  var idx = 1; //1回目のクリックか2回目のクリックかを記憶　　    　　  //
+  $(function(){
+    canvas = $("#myCanvas")[0];
+    ctx = canvas.getContext('2d');
+    $("#clearCanvasBtn").click( clearCanvas );
+    $("#myCanvas").click( drawAnyLine );
+  });
+  function drawAnyLine(e){
+    var bounding = e.target.getBoundingClientRect() ;
+    var x = Math.floor(e.clientX - bounding.left);
+    var y = Math.floor(e.clientY - bounding.top);
+    if( idx == 1 ){
+      x1 = ■ここを埋める■;
+      y1 = ■ここを埋める■;
+      idx = 2;
+    } else {
+      x2 = ■ここを埋める■;
+      y2 = ■ここを埋める■;
+      idx = 1;
+      //線幅指定　　    　　  //
+      ctx.■ここを埋める■ = 1;
+      //線色指定　　    　　  //
+      ctx.■ここを埋める■ = "#000000";
+      //パスの描き始め　　    　　  //
+      ctx.■ここを埋める■;
+      //ペン先を置く　　    　　  //
+      ctx.■ここを埋める■( x1, y1 );
+      //ペン先を移動させる　　    　　  //
+      ctx.■ここを埋める■( x2, y2 );
+      //パスを描画　　    　　  //
+      ctx.■ここを埋める■;
+    }
+  }
+  function clearCanvas(){
+    ctx.■ここを埋める■( 0, 0, 500, 300 );
+  }
+</script>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="300"></canvas>
+<br/>
+<input id="clearCanvasBtn" type="button" value="クリア">
+</body>
+</html>
+
