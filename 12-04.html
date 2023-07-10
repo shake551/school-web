@@ -24,33 +24,33 @@
     var x = Math.floor(e.clientX - bounding.left);
     var y = Math.floor(e.clientY - bounding.top);
     if( idx == 1 ){
-      x1 = ■ここを埋める■;
-      y1 = ■ここを埋める■;
-      ctx.■ここを埋める■ = 1;
-      ctx.■ここを埋める■ = "#000000";
+      x1 = x;
+      y1 = y;
+      ctx.lineWidth = 1;
+      ctx.strokeStyle = "#000000";
       //パスの書き始め　　    　　  //
-      ctx.■ここを埋める■;
+      ctx.beginPath();
       //3x3の塗り潰し矩形の描画(パス)　　    　　  //
-      ctx.■ここを埋める■;
+      ctx.fillRect(x1, y1, 3, 3);
       //パスを描画　　    　　  //
-      ctx.■ここを埋める■;
+      ctx.stroke();
       idx = 2;
     } else {
       //最初に描画した点をクリアする　　    　　  //
-      ctx.clearRect( ■ここを埋める■ );
-      x2 = ■ここを埋める■;
-      y2 = ■ここを埋める■;
+      ctx.clearRect( x1, y1, 3, 3 );
+      x2 = x;
+      y2 = y;
       idx = 1;
-      ctx.■ここを埋める■ = 1;
-      ctx.■ここを埋める■ = "#000000";
-      ctx.■ここを埋める■;
-      ctx.■ここを埋める■( x1, y1 );
-      ctx.■ここを埋める■( x2, y2 );
-      ctx.■ここを埋める■;
+      ctx.lineWidth = 1;
+      ctx.strokeStyle = "#000000";
+      ctx.beginPath();
+      ctx.moveTo( x1, y1 );
+      ctx.lineTo( x2, y2 );
+      ctx.stroke();
     }
   }
   function clearCanvas(){
-    ctx.■ここを埋める■( 0, 0, 500, 300 );
+    ctx.clearRect( 0, 0, 500, 300 );
   }
 </script>
 </head>
