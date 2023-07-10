@@ -24,29 +24,29 @@
     var r = 200;
     var ang = 0;
     var i;
-    ctx.■ここを埋める■;
-    ■ここを埋める■{
+    ctx.beginPath();
+    for (i = 0; i<40; i++) {
       ctx.arc( cx, cy, r, ang, ang+Math.PI/2, false );
-      if( ■ここを埋める■ == 0 ){
+      if( i % 4 == 0 ){
         //左下描画用の計算　　    　　  //
-        cy = cy ■ここを埋める■0.1;
-      } else if( ■ここを埋める■ == 1 ){
+        cy = cy + r * 0.1;
+      } else if( i%4 == 1 ){
         //左上描画用の計算　　    　　  //
-        cx = cx ■ここを埋める■0.1;
-      } else if( ■ここを埋める■ == 2 ){
+        cx = cx - r * 0.1;
+      } else if( i%4 == 2 ){
         //右上描画用の計算　　    　　  //
-        cy = cy ■ここを埋める■0.1;
+        cy = cy - r * 0.1;
       } else {
         //右下描画用の計算　　    　　  //
-        cx = cx ■ここを埋める■0.1;
+        cx = cx + r * 0.1;
       }
-      r = r■ここを埋める■;
-      ang = ang ■ここを埋める■;
+      r = r * 0.9;
+      ang = ang + Math.PI/2;
     }
-    ctx.■ここを埋める■;
+    ctx.stroke();
   }
   function clearCanvas(){
-    ctx.■ここを埋める■( 0, 0, 400, 400 );
+    ctx.clearRect( 0, 0, 400, 400 );
   }
 </script>
 </head>
