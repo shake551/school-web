@@ -24,29 +24,29 @@
     var x = Math.floor(e.clientX - bounding.left);
     var y = Math.floor(e.clientY - bounding.top);
     if( idx == 1 ){
-      x1 = ■ここを埋める■;
-      y1 = ■ここを埋める■;
+      x1 = x;
+      y1 = y;
       idx = 2;
     } else {
-      x2 = ■ここを埋める■;
-      y2 = ■ここを埋める■;
+      x2 = x;
+      y2 = y;
       idx = 1;
       //線幅指定　　    　　  //
-      ctx.■ここを埋める■ = 1;
+      ctx.lineWidth = 1;
       //線色指定　　    　　  //
-      ctx.■ここを埋める■ = "#000000";
+      ctx.strokeStyle = "#000000";
       //パスの描き始め　　    　　  //
-      ctx.■ここを埋める■;
+      ctx.beginPath();
       //ペン先を置く　　    　　  //
-      ctx.■ここを埋める■( x1, y1 );
+      ctx.moveTo( x1, y1 );
       //ペン先を移動させる　　    　　  //
-      ctx.■ここを埋める■( x2, y2 );
+      ctx.lineTo( x2, y2 );
       //パスを描画　　    　　  //
-      ctx.■ここを埋める■;
+      ctx.stroke();
     }
   }
   function clearCanvas(){
-    ctx.■ここを埋める■( 0, 0, 500, 300 );
+    ctx.clearRect( 0, 0, 500, 300 );
   }
 </script>
 </head>
