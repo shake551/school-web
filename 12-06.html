@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="ja-JP">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="jp270405061207010610141433340satxebsyhs7">
+<title>HTML5 canvas入門</title>
+<style type="text/css">
+  canvas { background-color: #E0E0E0; }
+</style>
+<script src="jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+  var canvas;
+  var ctx;
+  $(function(){
+    canvas = $("#myCanvas")[0];
+    ctx = canvas.getContext('2d');
+    $("#drawCanvasBtn").click( drawCanvas );
+    $("#clearCanvasBtn").click( clearCanvas );
+  });
+  //コードが複雑になるので座標の指定は実数を許す　　    　　  //
+  function drawCanvas(){
+    var cx = 200;
+    var cy = 200;
+    var r = 200;
+    var ang = 0;
+    ctx.■ここを埋める■;
+    //右下の描画(パス)　　    　　  //
+    ctx.arc( cx, cy, r, ang, ang+Math.PI/2, false );
+    cy = cy ■ここを埋める■0.1;
+    r = r ■ここを埋める■;
+    ang = ang ■ここを埋める■;
+    //左下の描画(パス)　　    　　  //
+    ctx.arc( cx, cy, r, ang, ang+Math.PI/2, false );
+    cx = cx ■ここを埋める■0.1;
+    r = r ■ここを埋める■;
+    ang = ang ■ここを埋める■;
+    //左上の描画(パス)　　    　　  //
+    ctx.arc( cx, cy, r, ang, ang+Math.PI/2, false );
+    ctx.■ここを埋める■;
+  }
+  function clearCanvas(){
+    ctx.■ここを埋める■( 0, 0, 400, 400 );
+  }
+</script>
+</head>
+<body>
+<canvas id="myCanvas" width="400" height="400"></canvas>
+<br/>
+<input id="drawCanvasBtn" type="button" value="描画">
+<input id="clearCanvasBtn" type="button" value="クリア">
+</body>
+</html>
+
