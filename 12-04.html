@@ -27,17 +27,17 @@
       x1 = x;
       y1 = y;
       ctx.lineWidth = 1;
-      ctx.strokeStyle = "#000000";
+      ctx.fillStyle = "#000000";
       //パスの書き始め　　    　　  //
       ctx.beginPath();
       //3x3の塗り潰し矩形の描画(パス)　　    　　  //
-      ctx.fillRect(x1, y1, 3, 3);
+      ctx.fillRect(x1 - 1, y1 - 1, 3, 3);
       //パスを描画　　    　　  //
       ctx.stroke();
       idx = 2;
     } else {
       //最初に描画した点をクリアする　　    　　  //
-      ctx.clearRect( x1, y1, 3, 3 );
+      ctx.clearRect( x1 - 1, y1 - 1, 3, 3 );
       x2 = x;
       y2 = y;
       idx = 1;
